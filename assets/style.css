@@ -39,7 +39,7 @@ table {
   table tr td:not(:first-child):after {
     display: flex;
     align-items: center;
-    content: "- - - - - - -";
+    content: "- - - - - - - -";
     font-size: 12px;
     height: 1em;
   }
