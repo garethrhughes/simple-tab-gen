@@ -1,50 +1,58 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Simple Tab Builder</title>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Your Website</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600"
+      rel="stylesheet"
+    />
 
-	<header>
-		<nav>
-			<ul>
-				<li>Your menu</li>
-			</ul>
-		</nav>
-	</header>
-	
-	<section>
-	
-		<article>
-			<header>
-				<h2>Article title</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</article>
-		
-		<article>
-			<header>
-				<h2>Article title</h2>
-				<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
-			</header>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-		</article>
-		
-	</section>
+    <link href="assets/style.css" rel="stylesheet" />
 
-	<aside>
-		<h2>About section</h2>
-		<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-	</aside>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/tab-gen.js"></script>
+  </head>
 
-	<footer>
-		<p>Gareth Hughes &copy; 2021</p>
-	</footer>
+  <body class="font-body">
+    <div class="flex flex-col h-screen justify-between">
+      <header class="bg-gray-100 border border-b-neutral-200">
+        <div class="container p-5">
+          <h1 class="text-3xl font-bold">Simple Tab Builder</h1>
+        </div>
+      </header>
 
-</body>
+      <section class="container mb-auto">
+        <div id="tab-container"></div>
+        <div class="p-5">
+          <button
+            id="add-row"
+            class="
+              bg-transparent
+              hover:bg-blue-500
+              text-blue-700
+              font-semibold
+              hover:text-white
+              py-2
+              px-4
+              border border-blue-500
+              hover:border-transparent
+              rounded
+            "
+          >
+            Add Row
+          </button>
+        </div>
+      </section>
 
+      <footer class="bg-gray-200 border border-t-neutral-400">
+        <div class="container p-5 text-center">
+          <a href="https://garethhughes.dev/">Gareth Hughes &copy;2022</a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
