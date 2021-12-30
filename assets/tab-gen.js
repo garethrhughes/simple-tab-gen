@@ -138,30 +138,35 @@ const save = () => {
 
 window.addEventListener("DOMContentLoaded", function () {
   if (location.hash) {
-    location.hash.split(";").forEach((table) => {
-      if (table.length > 0) {
-        const notes = table.replace(/^#/, "").split(":");
-        const tableLength = notes.shift();
-        const tableTitle = notes.shift();
+    try {
+      location.hash.split(";").forEach((table) => {
+        if (table.length > 0) {
+          const notes = table.replace(/^#/, "").split(":");
+          const tableLength = notes.shift();
+          const tableTitle = notes.shift();
 
-        const tableElement = init(
-          parseInt(tableLength.split("=")[1]),
-          decodeURIComponent(tableTitle.split("=")[1])
-        );
-
-        notes.forEach((note) => {
-          const noteData = note.split("=");
-
-          const node = tableElement.querySelectorAll(
-            'td[data-ref="' + noteData[0] + '"]'
+          const tableElement = init(
+            parseInt(tableLength.split("=")[1]),
+            decodeURIComponent(tableTitle.split("=")[1])
           );
 
-          if (node.length > 0) {
-            createInput(node[0], decodeURIComponent(noteData[1]));
-          }
-        });
-      }
-    });
+          notes.forEach((note) => {
+            const noteData = note.split("=");
+
+            const node = tableElement.querySelectorAll(
+              'td[data-ref="' + noteData[0] + '"]'
+            );
+
+            if (node.length > 0) {
+              createInput(node[0], decodeURIComponent(noteData[1]));
+            }
+          });
+        }
+      });
+    } catch {
+      console.error('Invalid hash');
+      init();
+    }
   } else {
     init();
   }
