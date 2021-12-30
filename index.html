@@ -14,12 +14,12 @@
     <link href="assets/style.css" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="assets/tab-gen.js"></script>
+    <script src="assets/script.js"></script>
   </head>
 
   <body class="font-body">
     <div class="flex flex-col h-screen justify-between">
-      <header class="bg-gray-100 border border-b-neutral-200">
+      <header class="bg-gray-100 border border-b-neutral-300">
         <div class="container p-5">
           <h1 class="text-3xl font-bold">Simple Tab Builder</h1>
         </div>
@@ -30,36 +30,14 @@
         <div class="p-5">
           <button
             id="add-row"
-            class="
-              bg-transparent
-              hover:bg-blue-500
-              text-blue-700
-              font-semibold
-              hover:text-white
-              py-2
-              px-4
-              border border-blue-500
-              hover:border-transparent
-              rounded
-            "
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           >
             Add Row
           </button>
 
           <button
             id="save"
-            class="
-              bg-transparent
-              hover:bg-blue-500
-              text-blue-700
-              font-semibold
-              hover:text-white
-              py-2
-              px-4
-              border border-blue-500
-              hover:border-transparent
-              rounded
-            "
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
           >
             Save
           </button>
@@ -67,8 +45,27 @@
       </section>
 
       <footer class="bg-gray-200 border border-t-neutral-400">
-        <div class="p-5 text-center">
-          <a href="https://garethhughes.dev/">Gareth Hughes &copy;2022</a>
+        <div class="p-5 text-center flex justify-between content-center">
+          <a class="flex self-center" href=https://garethhughes.dev/>Gareth Hughes &copy;2022</a>
+          
+
+          <ul class="socials list-none opacity-75 flex self-center">
+            <li class="inline-block">
+              <a href=https://github.com/garethrhughes
+                ><img class="w-8" src=assets/images/github.png
+              /></a>
+            </li>
+            <li class="inline-block">
+              <a href=https://twitter.com/garethrhughes
+                ><img class="w-8" src=assets/images/twitter.png
+              /></a>
+            </li>
+            <li class="inline-block">
+              <a href=https://www.linkedin.com/in/garethhughes/
+                ><img class="w-8" src=assets/images/linkedin.png
+              /></a>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>
